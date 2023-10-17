@@ -1,0 +1,20 @@
+dist:
+  module: github.com/open-telemetry/opentelemetry-collector-releases/contrib
+  name: otelcol-contrib
+  description: OpenTelemetry Collector Contrib
+  version: OTEL_VERSION
+  output_path: /otel-contrib
+  otelcol_version: OTEL_VERSION
+
+extensions:
+  - gomod: github.com/open-telemetry/opentelemetry-collector-contrib/extension/healthcheckextension vOTEL_VERSION
+
+exporters:
+  - gomod: github.com/open-telemetry/opentelemetry-collector-contrib/exporter/prometheusexporter vOTEL_VERSION
+
+processors:
+  - gomod: go.opentelemetry.io/collector/processor/batchprocessor vOTEL_VERSION
+
+receivers:
+  - gomod: go.opentelemetry.io/collector/receiver/otlpreceiver vOTEL_VERSION
+
