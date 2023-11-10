@@ -20,5 +20,5 @@ docker run -v ./otel-contrib/:/otel-contrib $(docker build -q .)
 A given version of components can be set by build argument.
 
 ```bash
-docker run -v ./otel-contrib/:/otel-contrib $(docker build -e -q --build-arg OTEL_VERSION=0.87.0 .)
+docker run -v ./otel-contrib/:/otel-contrib $(docker build -e -q --build-arg OTEL_VERSION=0.88.0 .)
 ```
