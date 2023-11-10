@@ -1,4 +1,4 @@
-ARG OTEL_VERSION=0.85.0
+ARG OTEL_VERSION=0.86.0
 
 FROM golang:1.20-alpine3.17 as ocb
 RUN set -ex && \
