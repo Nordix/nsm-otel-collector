@@ -17,4 +17,3 @@ processors:
 
 receivers:
   - gomod: go.opentelemetry.io/collector/receiver/otlpreceiver vOTEL_VERSION
-
