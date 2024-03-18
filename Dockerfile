@@ -1,6 +1,6 @@
 ARG OTEL_VERSION=0.88.0
 
-FROM golang:1.20-alpine3.17 as ocb
+FROM golang:1.21-alpine3.17 as ocb
 RUN set -ex && \
     apk --update add git wget
 ENV GO111MODULE=on
