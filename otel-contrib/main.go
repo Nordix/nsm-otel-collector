@@ -9,10 +9,6 @@ import (
 	"go.opentelemetry.io/collector/component"
 	"go.opentelemetry.io/collector/confmap"
 	envprovider "go.opentelemetry.io/collector/confmap/provider/envprovider"
-	fileprovider "go.opentelemetry.io/collector/confmap/provider/fileprovider"
-	httpprovider "go.opentelemetry.io/collector/confmap/provider/httpprovider"
-	httpsprovider "go.opentelemetry.io/collector/confmap/provider/httpsprovider"
-	yamlprovider "go.opentelemetry.io/collector/confmap/provider/yamlprovider"
 	"go.opentelemetry.io/collector/otelcol"
 )
 
@@ -20,7 +16,7 @@ func main() {
 	info := component.BuildInfo{
 		Command:     "otelcol-contrib",
 		Description: "OpenTelemetry Collector Contrib",
-		Version:     "0.109.0",
+		Version:     "0.110.0",
 	}
 
 	set := otelcol.CollectorSettings{
@@ -30,10 +26,6 @@ func main() {
 			ResolverSettings: confmap.ResolverSettings{
 				ProviderFactories: []confmap.ProviderFactory{
 					envprovider.NewFactory(),
-					fileprovider.NewFactory(),
-					httpprovider.NewFactory(),
-					httpsprovider.NewFactory(),
-					yamlprovider.NewFactory(),
 				},
 			},
 		},
