@@ -4,7 +4,7 @@ FROM golang:1.21-alpine3.17 as ocb
 RUN set -ex && \
     apk --update add git wget
 ENV GO111MODULE=on
-RUN go install go.opentelemetry.io/collector/cmd/builder@latest
+RUN go install go.opentelemetry.io/collector/cmd/builder@v0.106.0
 WORKDIR /gen
 ARG COC_VERSION
 COPY ./otel-collector-builder.yaml /gen/otel-collector-builder.yaml
