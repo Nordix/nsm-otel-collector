@@ -1,10 +1,10 @@
 ARG OTEL_VERSION=0.88.0
 
-FROM golang:1.22-alpine3.20 as ocb
+FROM golang:1.23-alpine3.20 as ocb
 RUN set -ex && \
     apk --update add git wget
 ENV GO111MODULE=on
-RUN go install go.opentelemetry.io/collector/cmd/builder@v0.119.0
+RUN go install go.opentelemetry.io/collector/cmd/builder@latest
 WORKDIR /gen
 ARG COC_VERSION
 COPY ./otel-collector-builder.yaml /gen/otel-collector-builder.yaml
