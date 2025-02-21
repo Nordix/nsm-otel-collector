@@ -12,7 +12,7 @@ exporters:
   - gomod: github.com/open-telemetry/opentelemetry-collector-contrib/exporter/prometheusexporter vOTEL_VERSION
 
 processors:
-  - gomod: go.opentelemetry.io/collector/processor/batchprocessor vOTEL_VERSION
+  - gomod: go.opentelemetry.io/collector/processor/batchprocessor v0.120.1-0.20250219144032-c2af75d88e89
 
 receivers:
-  - gomod: go.opentelemetry.io/collector/receiver/otlpreceiver vOTEL_VERSION
+  - gomod: go.opentelemetry.io/collector/receiver/otlpreceiver v0.120.1-0.20250219144032-c2af75d88e89
